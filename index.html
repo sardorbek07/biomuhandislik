@@ -5,28 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test</title>
   <style>
-    body {
+    * {
       margin: 0;
-      padding: 40px;
-      font-family: sans-serif;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px 48px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      max-width: 420px;
+      width: 90%;
+    }
+
+    .icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #94a3b8;
+      margin-bottom: 32px;
+    }
+
     .download-btn {
-      display: inline-block;
-      padding: 14px 28px;
-      background-color: #2563eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
       color: white;
       text-decoration: none;
-      border-radius: 8px;
-      font-size: 16px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
     }
+
     .download-btn:hover {
-      background-color: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.45);
+    }
+
+    .download-btn:active {
+      transform: translateY(0);
+    }
+
+    .download-btn svg {
+      width: 18px;
+      height: 18px;
     }
   </style>
 </head>
 <body>
-  <a class="download-btn" href="test.pdf" download>
-    📄 Biomuhandislik va nanotexnologiya — Yuklab olish
-  </a>
+  <div class="card">
+    <div class="icon">📘</div>
+    <div class="title">Biomuhandislik va nanotexnologiya</div>
+    <div class="subtitle">PDF format • Ma'ruza matni</div>
+    <a class="download-btn" href="test.pdf" download>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/>
+      </svg>
+      Yuklab olish
+    </a>
+  </div>
 </body>
 </html>
