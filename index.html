@@ -5,34 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
+      padding: 40px;
+      font-family: sans-serif;
     }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+    .download-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
     }
-    .mobile-link {
-      display: none;
-      padding: 16px;
-      font-size: 18px;
+    .download-btn:hover {
+      background-color: #1d4ed8;
     }
   </style>
 </head>
 <body>
-
-  <script>
-    if (window.innerWidth <= 768) {
-      
-      document.write('<a class="mobile-link" href="test.pdf" style="display:block">Biomuhandislik va nanotexnologiya</a>');
-    } else {
-     
-      document.write('<iframe src="test.pdf"></iframe>');
-    }
-  </script>
-
+  <a class="download-btn" href="test.pdf" download>
+    📄 Biomuhandislik va nanotexnologiya — Yuklab olish
+  </a>
 </body>
 </html>
