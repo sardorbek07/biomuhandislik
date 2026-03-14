@@ -2,6 +2,7 @@
 <html lang="uz">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test</title>
   <style>
     html, body {
@@ -14,12 +15,25 @@
       height: 100%;
       border: none;
     }
+
+    .mobile-link {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        display: none;
+      }
+      .mobile-link {
+        display: block;
+        padding: 16px;
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 <body>
   <iframe src="test.pdf"></iframe>
-      <a href="test.pdf">Biomuhandislik va nanotexnologiya</a><br>
-        
-    
+  <a class="mobile-link" href="test.pdf">Biomuhandislik va nanotexnologiya</a>
 </body>
 </html>
