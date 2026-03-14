@@ -15,25 +15,24 @@
       height: 100%;
       border: none;
     }
-
     .mobile-link {
       display: none;
-    }
-
-    @media (max-width: 768px) {
-      iframe {
-        display: none;
-      }
-      .mobile-link {
-        display: block;
-        padding: 16px;
-        font-size: 18px;
-      }
+      padding: 16px;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
-  <iframe src="test.pdf"></iframe>
-  <a class="mobile-link" href="test.pdf">Biomuhandislik va nanotexnologiya</a>
+
+  <script>
+    if (window.innerWidth <= 768) {
+      
+      document.write('<a class="mobile-link" href="test.pdf" style="display:block">Biomuhandislik va nanotexnologiya</a>');
+    } else {
+     
+      document.write('<iframe src="test.pdf"></iframe>');
+    }
+  </script>
+
 </body>
 </html>
